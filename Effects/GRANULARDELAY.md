@@ -4,16 +4,16 @@
 >Repeats a short portion of the input sound, giving it a buzzy character or producing
 the effect of playing a roll.
 >
- >| Parameter | Value (Bold: default) | Explanation |
- | --------- | --------------------- | ----------- |
- | Time `KNOB`| 0 - **50** - 100      | Set spacing of the repeats. |
- | Feedback  | 0 - **70** - 100      | Sets the length that will be repeated. |
- | E-Level   | 0 - **50** - 100      | Sets the volume of the effect sound. |
+>| Parameter | Value (Bold: default) | Explanation |
+>| --------- | --------------------- | ----------- |
+>| Time `KNOB`| 0 - **50** - 100      | Set spacing of the repeats. |
+>| Feedback  | 0 - **70** - 100      | Sets the length that will be repeated. |
+>| E-Level   | 0 - **50** - 100      | Sets the volume of the effect sound. |
 
 ## Additional documentation
 #### Note Values
 Granular Delay can be used as a synth-like melody/bass sound by setting `Feedback` high enough and `Time` low enough. For this purpose it is quite useful that the values of `Time` correspond to note values of "normal" notes ([12-TET](https://en.wikipedia.org/wiki/12_equal_temperament)). \
-The table below shows the `Time` value and its corresponding `Note`. Next to that is the `frequency` of the note in 12-TET with A4 at 440 Hz. \
+The table below shows the `Time` value and its corresponding `Note`. Next to that is the `Frequency` of the note in 12-TET with A4 at 440 Hz. \
 It doesn't contain all possible values for `Time` as values higher then 81 (and even some below that) have a too low repeat frequency to produce an synth like continuous sound. In other words the gaps between the repetitions of the trigger sounds is so big that the repetitions are no longer perceived as a note value but rather as a fast repeating rhythm.
 
 |Time|Note|Frequency|
@@ -119,3 +119,18 @@ It doesn't contain all possible values for `Time` as values higher then 81 (and 
 |98| | |
 |99| | |
 |100| | |
+
+#### Assign
+> `TARGET MIN` and `TARGET MAX`: Specifies the variable range of the function (parameter) that is specified as the target.
+The value (MIN: minimum value, MAX: maximum value) depends on the parameter that is specified as the target.
+
+##### Time
+As the parameter range perfectly corresponds to the `TARGET MIN`-`TARGET MAX` range of `Assign` (0 - 100) there is no conversion needed and the `TARGET MIN`/`TARGET MAX` values directly translates into to `Time` values.
+##### Feedback
+As the parameter range perfectly corresponds to the `TARGET MIN`-`TARGET MAX` range of `Assign` (0 - 100) there is no conversion needed and the `TARGET MIN`/`TARGET MAX` values directly translates into to `Feedback` values.
+##### E-Level
+As the parameter range perfectly corresponds to the `TARGET MIN`-`TARGET MAX` range of `Assign` (0 - 100) there is no conversion needed and the `TARGET MIN`/`TARGET MAX` values directly translates into to `E-Level` values.
+
+###### _Operationalization_
+_GRANULAR DELAY in TFX AA, Inward Kick without any FX looped as trigger-sound. Comparison to the relative sine wave via <https://onlinetonegenerator.com/> done by ear for a few example sounds at different_ `Time` _values. Generalization of these values to the full table._ \
+_Different trigger-sounds might contain different overtones, which might change/influence the pitch perception._
