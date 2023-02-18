@@ -19,7 +19,7 @@ effect that divides the delay time, then deliver them to L and R channels.
 #### Note Values
 As pitch is only a certain frequency, a delay can be used to generate a pitched note when using an appropriately small `Time`.
 The relation of the pitch/frequency and the `Time` is:\
-$1 ms = 1 * 10^(-3) s = 1/(1 * 10^(-3)) Hz$
+$1 ms = 1 * 10^{-3} s = \frac{1}{(1 * 10^{-3})} Hz$
 The resulting frequencies are listed in the table above.
 Furthermore the table lists the closest "normal" note (`Relative Note`) and the "target" frequency of that note (`Frequency of the Note`) ([12-TET](https://en.wikipedia.org/wiki/12_equal_temperament)) with A4 at 440 Hz.
 The results are listed until C0 because lower values are no longer suitable to produce audible pitches as their frequency is too low (arguably this cut-off could be higher).
@@ -141,5 +141,4 @@ The value (MIN: minimum value, MAX: maximum value) depends on the parameter that
 ##### E-Level
 
 ###### _Operationalization_
-_GRANULAR DELAY in TFX AA, Inward Kick without any FX looped as trigger-sound. Comparison to the relative sine wave via <https://onlinetonegenerator.com/> done by ear for a few example sounds at different_ `Time` _values. Generalization of these values to the full table._ \
-_Different trigger-sounds might contain different overtones, which might change/influence the pitch perception._
+_Their were no meassurements done. The frequencies of the 12-TET notes are based on <https://en.wikipedia.org/wiki/Piano_key_frequencies>_
