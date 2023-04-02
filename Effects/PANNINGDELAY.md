@@ -1,4 +1,4 @@
-# GRANUALR DELAY
+# PANNING DELAY
 
 ## Official documentation
 >This delay is specifically for stereo output. This allows you to obtain the tap delay
